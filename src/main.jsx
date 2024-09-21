@@ -6,29 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import singleSpaReact from 'single-spa-react';
 
 // Single-SPA react adapter
-const reactLifecycles = singleSpaReact({
-  React,
-  ReactDOM,
-  rootComponent: App,
-  domElementGetter: () => document.getElementById('root'),
-  errorBoundary(err, info, props) {
-    console.error(err, info, props);
-    return <div>Something went wrong</div>;
-  }
-});
-export async function bootstrap() {
-  console.log("Netflix clone microfrontend bootstrap");
-}
 
-export async function mount(props) {
-  console.log("Netflix clone microfrontend mount", props);
-  ReactDOM.render(<App {...props} />, document.getElementById('root'));
-}
-
-export async function unmount(props) {
-  console.log("Netflix clone microfrontend unmount", props);
-  ReactDOM.unmountComponentAtNode(document.getElementById('root'));
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
