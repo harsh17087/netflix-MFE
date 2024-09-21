@@ -10,7 +10,7 @@ export default defineConfig({
     lib: {
       entry: 'src/main.jsx',
       name: 'MyMicrofrontend',
-      formats: ['es'],
+      formats: 'system',
       fileName: (format) => `my-netflixclone-microfrontend.${format}.js`,
     },
     rollupOptions: {
@@ -19,7 +19,6 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'single-spa': 'singleSpa',
         },
       },
     },
