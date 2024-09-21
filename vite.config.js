@@ -10,7 +10,7 @@ export default defineConfig({
     lib: {
       entry: 'src/main.jsx',
       name: 'MyMicrofrontend',
-      formats: ['es', 'umd'],
+      formats: ['es'],
       fileName: (format) => `my-netflixclone-microfrontend.${format}.js`,
     },
     rollupOptions: {
