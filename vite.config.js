@@ -19,6 +19,7 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'single-spa': 'singleSpa',
         },
       },
     },
