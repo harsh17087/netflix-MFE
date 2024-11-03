@@ -10,18 +10,12 @@ export default defineConfig({
     open: true,
   },
   build: {
-    lib: {
-      entry: 'src/main.jsx',
-      name: 'MyMicrofrontend',
-      formats: ['es','system'],
-      fileName: (format) => `my-netflixclone-microfrontend.${format}.js`,
-    },
     rollupOptions: {
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'single-spa': 'singleSpa',
         },
       },
     },
