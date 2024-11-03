@@ -9,15 +9,4 @@ export default defineConfig({
   server: {
     open: true,
   },
-  build: {
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
-    },
-  },
 });
